@@ -1,5 +1,4 @@
 provider "aws" {
-  shared_credentials_file = "creds"
   region                  = "eu-north-1"
 }
 
