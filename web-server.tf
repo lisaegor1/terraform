@@ -9,6 +9,7 @@ resource "aws_eip" "my_static_ip" {
 resource "aws_instance" "WebServer" {
   ami                    = "ami-0bd9c26722573e69b"
   instance_type          = "t3.micro"
+  key_name               = "Jenkins-Master"
   vpc_security_group_ids = [aws_security_group.webserver.id]
   user_data              = file("user_data.sh") # or <<EOF ... EOF
   tags = {
